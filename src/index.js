@@ -8,7 +8,7 @@ import express from "express";
 
 DotEnv.config();
 // we are using port 8000
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 80;
 
 const app = express();
 
