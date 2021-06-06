@@ -1,0 +1,30 @@
+{
+  "name": "todo_app_backend",
+  "version": "1.0.0",
+  "description": "todo app backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./build/index.js",
+    "start:dev": "nodemon --exec babel-node ./src/index.js",
+    "build": "npm run clean && npm run build-babel",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel src -d build -s --copy-files"
+  },
+  "author": "shubham",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
