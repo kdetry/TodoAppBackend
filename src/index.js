@@ -23,13 +23,7 @@ mongoose
     console.log("CONNECTED TO DATABASE");
   });
 
-// middleware for cors to allow cross origin resource sharing
-const corsOptions = {
-  origin: 'http://localhost:3000',
-}
-const configuredCors = cors(corsOptions);
-
-app.use(configuredCors);
+app.use(cors());
 // middleware to convert our request data into JSON format
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
